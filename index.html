@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXORA | Visual Stories</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons (Small CDN Library for UI Icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">PIXORA</a>
+            <nav class="nav-links">
+                <a href="#gallery">Gallery</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+                <i class="ph ph-x"></i>
+            </button>
+            <nav class="mobile-nav-links">
+                <a href="#gallery" class="mobile-link">Gallery</a>
+                <a href="#categories" class="mobile-link">Categories</a>
+                <a href="#about" class="mobile-link">About</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-label">VISUAL STORIES</span>
+            <h1 class="hero-title">Every Picture<br><span class="grad">Tells A Story.</span></h1>
+            <p class="hero-desc">Explore a curated collection of moments, places and perspectives captured through photography.</p>
+            <a href="#gallery" class="btn-primary">Explore Gallery</a>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery-section">
+        
+        <div id="categories" class="category-filter">
+            <!-- Categories rendered by JS -->
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Image Cards rendered by JS -->
+        </div>
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2 class="about-title">About Pixora</h2>
+            <p class="about-text">Pixora is a visual collection built to celebrate photography, places and moments. Explore stories captured through different perspectives. Our carefully curated gallery showcases the beauty of the world, from intricate architecture to breathtaking landscapes.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3 class="footer-logo">PIXORA</h3>
+                <p class="footer-tagline">Visual stories, beautifully captured.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#gallery">Gallery</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pixora. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+                <i class="ph ph-x"></i>
+            </button>
+            
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+                <i class="ph ph-caret-left"></i>
+            </button>
+            
+            <div class="lightbox-image-container">
+                <img src="" alt="" class="lightbox-img" id="lightboxImg">
+                <div class="lightbox-loader" id="lightboxLoader"></div>
+            </div>
+            
+            <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+                <i class="ph ph-caret-right"></i>
+            </button>
+            
+            <div class="lightbox-info">
+                <div class="lightbox-meta">
+                    <h3 class="lightbox-title" id="lightboxTitle"></h3>
+                    <span class="lightbox-category" id="lightboxCategory"></span>
+                </div>
+                <div class="lightbox-counter" id="lightboxCounter"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
